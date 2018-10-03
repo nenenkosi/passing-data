@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      SIGN IN
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bck" padding>
+<h1 class="logo">Go_Ox</h1>
+<p>Pleas login below</p>
+<img src="" alt="">
+<ion-list no-lines>
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input type="text" #name></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="password" #pass></ion-input>
+  </ion-item>
+</ion-list>
+<button ion-button full (click)="confirmUser(name.value,pass.value)">Log In</button>
+</ion-content>

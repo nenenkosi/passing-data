@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>List of Employees</ion-title>
+  </ion-navbar>
+</ion-header>
+  <ion-content padding>
+    <h1>To add new employee pleas click below</h1>
+      <ion-buttons end>
+          <button block ion-button icon-only (click)="showPrompt()" >
+              <ion-icon name="add" (click)="showPrompt()" ></ion-icon>
+          </button>
+        </ion-buttons>
+  <ion-list>
+    <button ion-item *ngFor="let emp of list; let i = index" (click)="showOptions(i)">
+        <ion-avatar item-start>
+            <img [src]="emp.pic">
+        </ion-avatar>
+        <h2>{{emp.name}} {{emp.surname}}</h2>
+        <h3>ID : {{emp.idnum}}</h3>
+        <p>Tittle : {{emp.role}}</p>
+    </button>
+  </ion-list>
+</ion-content>
+
